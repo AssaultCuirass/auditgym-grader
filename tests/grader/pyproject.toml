@@ -1,0 +1,18 @@
+[project]
+name = "auditgym-grader-checks"
+version = "1.0.0"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "jsonschema>=4.18,<5",
+    "pytest>=8.2,<10",
+    "hypothesis>=6,<7",
+    "numpy>=1.26,<3",
+    "pyyaml>=6,<7",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+pythonpath = ["../../src"]
+testpaths = [".", "../attacks", "../leakage"]
